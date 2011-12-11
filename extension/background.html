@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+chrome.experimental.webRequest.onBeforeSendHeaders.addListener(
+  function(details) {
+    return {
+		requestHeaders: details.requestHeaders.filter(
+			function(elem) { return elem.name != 'Referer'}
+		)
+	};
+  },
+  {},
+  ["requestHeaders", "blocking"]
+);
+</script>
+</head>
+<body>
+Currently this blocks ALL referers, future versions might have a whitelist or block only third party referers...
+</body>
+</html>

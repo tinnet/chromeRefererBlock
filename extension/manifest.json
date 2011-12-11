@@ -1,0 +1,9 @@
+{
+ "permissions": [
+    "http://*/*", "https://*/*", "webRequest", "experimental"
+  ],
+  "background_page": "background.html",
+ "name": "Block the referer(sic!) header in Chrome", 
+ "version": "0.1", 
+ "description": "strips all referer headers from all requests"
+}
